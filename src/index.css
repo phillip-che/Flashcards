@@ -1,0 +1,10 @@
+.card-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 55%;
+  box-shadow: 0 0 5px 2px #da1412;
+  margin: auto;
+}
