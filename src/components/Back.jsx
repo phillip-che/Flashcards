@@ -1,9 +1,9 @@
 import React from "react";
 
-const Back = () => {
+const Back = ( pokemon ) => {
     return(
         <div className="Back">
-            
+            { pokemon.answer }
         </div>
     )
 }
