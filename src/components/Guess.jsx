@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React from 'react'
+import { useState } from 'react'
 
 const Guess = ( pokemon ) => {
     const [guess, setGuess] = useState('')
@@ -13,15 +13,14 @@ const Guess = ( pokemon ) => {
         }
     }
 
-    return(
+    return (
         <div>
             <label className="guess">
                 Guess:
             </label>
-            <input className="input" id={result} onChange={(e) => {
-                setGuess(e.target.value);
-            }}>
-            </input>
+            <input value={guess} className="input" id={result} onChange={(e) => {
+                setGuess(e.target.value)
+            }} />
             <button className="submit" onClick={checkGuess}>
                 Submit
             </button>

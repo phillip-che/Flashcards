@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const Back = ( pokemon ) => {
-    return(
+    return (
         <div className="Back">
             { pokemon.answer }
         </div>

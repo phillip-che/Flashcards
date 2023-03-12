@@ -20,6 +20,10 @@ function App() {
 const [flashcard, setFlashcard] = useState(0);
 const nextCard = () => {setFlashcard((flashcard + 1)%10)}; 
 const prevCard = () => setFlashcard((flashcard <= 0 ? flashcard :  (flashcard - 1)%10));
+const shuffleCards = () => {
+  POKEMON_INFO.sort( () => Math.random() - 0.5)
+  setFlashcard(0)
+}
 const pokemon = POKEMON_INFO[flashcard];
 
 return (
@@ -29,11 +33,11 @@ return (
         <h1>Who's That Pokémon?</h1>
         <h3>How many Pokémon do you think you can guess?</h3>
         <p>Number of Pokémon: 10</p>
-        <Card img={pokemon.image} answer={pokemon.answer}/>
-        <Guess answer={pokemon.answer} />
+        <Card img={pokemon.image} answer={pokemon.answer} key={flashcard}/>
+        <Guess answer={pokemon.answer} key={new Date().getTime()} />
         <button className="prev" onClick={prevCard}>←</button>
         <button className="next" onClick={nextCard}>→</button>
-        <button className="shuffle" onClick={() => POKEMON_INFO.sort( () => Math.random() - 0.5)}><Icon path={mdiShuffle} size={1} /></button>
+        <button className="shuffle" onClick={shuffleCards}><Icon path={mdiShuffle} size={1} /></button>
       </div>
     </div>
   )

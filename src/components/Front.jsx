@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const Front = ( pokemon ) => {
-    return(
+    return (
         <div className="Front">
             <img className="pokemon-image" src={pokemon.img}/>
         </div>
