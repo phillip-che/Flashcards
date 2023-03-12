@@ -15,10 +15,10 @@ const Guess = ( pokemon ) => {
 
     return(
         <div>
-            <label>
+            <label className="guess">
                 Guess:
             </label>
-            <input onChange={(e) => {
+            <input className="input" id={result} onChange={(e) => {
                 setGuess(e.target.value);
             }}>
             </input>

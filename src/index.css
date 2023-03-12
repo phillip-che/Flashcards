@@ -47,6 +47,7 @@
 .submit {
   font-weight: 800;
   font-size: 15px;
+  margin-left: 5px;
 }
 
 button {
@@ -69,4 +70,24 @@ button {
 button:hover {
   background-color: #ff4742;
   color: #ffcb05;
+}
+
+.guess {
+  color: #ff4742;
+  font-size: 25px;
+  margin-right: 5px;
+  margin-bottom: -10px;
+  font-weight: 800;
+}
+
+.input {
+  font-size: 20px;
+}
+
+#correct {
+  background-color: #ffcb05;
+}
+
+#incorrect {
+  background-color: #ff4742;
 }
